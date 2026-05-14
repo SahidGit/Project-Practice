@@ -1,0 +1,257 @@
+/* Global variables */
+:root {
+  --bg: #09090d;
+  --surface: rgba(255, 255, 255, 0.08);
+  --text: #f6f7ff;
+  --accent: #e8602e;
+  --accent-soft: rgba(232, 96, 46, 0.18);
+  --radius: 24px;
+  --font-body: "Manrope", "Helvetica", sans-serif;
+  --font-heading: "NeueMachina", "Manrope", sans-serif;
+}
+
+@font-face {
+  font-family: NeueMachina;
+  src: url(/NeueMachina-Regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  line-height: 1.5;
+  background: radial-gradient(circle at top, rgba(232, 96, 46, 0.14), transparent 28%),
+    linear-gradient(180deg, #111 0%, #07070a 100%);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 28px;
+}
+
+.brand img {
+  width: 158px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 12px 24px;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+}
+
+.nav-links li a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus-visible {
+  color: var(--text);
+}
+
+.nav-action {
+  display: flex;
+  align-items: center;
+}
+
+.nav-action button {
+  position: relative;
+  padding: 10px 18px;
+  min-height: 44px;
+  line-height: 1;
+  border: none;
+  background-color: #111;
+  color: var(--text);
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.nav-action button:hover {
+  background-color: var(--accent);
+}
+
+.nav-action .button-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-action .button-text-back {
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.nav-action button:hover .button-text-front {
+  transform: translateY(-200%);
+}
+
+.nav-action button:hover .button-text-back {
+  transform: translateY(-100%);
+}
+
+.hero-intro {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 110px);
+  padding: 0 24px 60px;
+}
+
+.hero-content {
+  width: min(100%, 820px);
+  display: grid;
+  gap: 24px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.4rem;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 5vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.hero-content h1 span {
+  position: relative;
+  display: inline-flex;
+  border-radius: 0.9rem;
+  padding: 0.72px 6px;
+  background: #d5ff40;
+  color: #111;
+  font-weight: 300;
+  border: 1px solid whitesmoke;
+}
+
+.hero-copy {
+  max-width: 670px;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.08rem;
+}
+
+.hero-stats {
+  color: #e8eaf6;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-stats span {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.primary-button {
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 30px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #ff6b3a 0%, #e8602e 100%);
+  color: #fff;
+  font-size: 15px;
+  box-shadow: 0 20px 40px rgba(232, 96, 46, 0.24);
+  cursor: pointer;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 50px rgba(232, 96, 46, 0.3);
+}
+
+.primary-button span {
+  transition: transform 0.24s ease;
+}
+
+.primary-button:hover span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 860px) {
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px 20px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero-intro {
+    min-height: auto;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-nav {
+    padding: 18px 18px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.4rem, 9vw, 3.6rem);
+  }
+
+  .nav-action button,
+  .primary-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

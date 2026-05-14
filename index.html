@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://px.pixxo.io/sheryians/favicon_FuNGo5cLy.webp" type="image/x-icon">
+    <title>Sheryians Coding School | Learn Coding in India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="site-nav">
+            <div class="brand">
+                <a href="index.html">
+                    <img src="https://dfdx9u0psdezh.cloudfront.net/logos/full-logo.webp" alt="Sheryians logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="https://www.sheryians.com/courses">Courses</a></li>
+                <li><a href="https://bootcamp.sheryians.com/">BootCamp</a></li>
+                <li><a href="#callback">Request Callback</a></li>
+            </ul>
+            <div class="nav-action">
+                <button type="button" id="sign-in-btn">
+                    <span class="button-text button-text-front">Sign In</span>
+                    <span class="button-text button-text-back" aria-hidden="true">Sign In</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-intro" id="home">
+            <p class="eyebrow">LEARN. BUILD. GET PLACED.</p>
+            <div class="hero-content">
+                <h1>Become The Software Engineer<br>That <span>Companies</span> Want To Hire!</h1>
+                <p class="hero-copy">
+                    Join a growing community of students preparing for real-world tech careers at Sheryians.
+                </p>
+                <div class="hero-stats">
+                    <span>1 Million+</span> registered learners<sup>*</sup> in our mastery program
+                </div>
+                <button type="button" class="primary-button">
+                    Start Journey <span aria-hidden="true">→</span>
+                </button>
+            </div>
+        </section>
+    </main>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var signInBtn = document.getElementById('sign-in-btn');
+
+        if (signInBtn) {
+            signInBtn.addEventListener('click', function() {
+                window.location.href = 'https://www.sheryians.com/auth/signin';
+            });
+        }
+    });
+</script>
+</body>
+</html>
