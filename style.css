@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: NeueMachina;
-  src: url(./NeueMachina-Regular.otf);
+  src: url('/fonts/NeueMachina-Regular.otf');
 }
 * {
   margin: 0;
